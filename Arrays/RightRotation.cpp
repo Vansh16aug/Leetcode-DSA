@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void rightRotate(int arr[], int k,int n){
-    reverse(arr,arr+n);
-    reverse(arr,arr+k);
-    reverse(arr+k,arr+n);
+void rightRotate(int arr[], int k, int n) {
+    k = k % n;
+    reverse(arr, arr + n); 
+    reverse(arr, arr + k);
+    reverse(arr + k, arr + n);
 }
 
 int main(){
